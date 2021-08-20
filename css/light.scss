@@ -1,0 +1,117 @@
+$background: #fff;
+$text: #000;
+$active: #faee1c;
+$button: #eac100;
+
+.light-theme{
+  .fa-search, 
+  .nav > .nav-item:last-child
+  {
+    border: 0 !important;
+    font-weight: bold !important;
+  }
+  
+  .menu-nav > .nav > .nav-item:last-child{
+    background: #000 !important;
+    i{
+      color: $background !important;
+    }
+  }
+  
+  .price{
+    font-weight: bold !important;
+  }
+  #bottom-nav{
+    border-top: 1px solid $text !important;
+  }
+}
+
+
+#myApp.light-theme{
+  background: $background;
+  #top-nav{
+    i{
+      color: $text;     
+    }
+    .toggle, .default, .active{
+      border: 2px solid $text;
+      &::before{
+        background: $text;
+      }
+      &.default{
+        background: $background;
+        &::before{
+          left: -1px;
+        }
+      }
+      &.default.active{
+        background: $text;
+        &::before{
+          background: $background;
+          left: 40px;
+        }
+      }
+      
+      
+    }
+  }
+
+  #main{
+    .title{
+      color: $text;
+    }
+    
+    .menu-nav{
+      .nav{
+        .nav-item{
+          color: $text;
+          &.active{
+            &::before{
+              background: #faee1c;
+            }
+          }
+          &.filter{
+            border: 1px solid $text;
+          }
+        }
+      }
+    }
+
+    .foods{
+      color: $text;
+      .food-box{
+        .food-pic{
+          border-radius: 50%;
+          img{
+            box-shadow: 0 0 15px black;
+          }
+        }
+        .price{
+          color: $text;
+        }
+        .add-to-cart{
+          i{
+            background: black;
+            color: $background;      
+          }
+        }
+      }
+    }
+  }
+
+  #bottom-nav{
+    .nav{
+      .nav-item{
+        color: $text;
+        &:nth-child(3){
+          color: #fff;
+          background: #eac100;
+          box-shadow: 0 0 20px #faee1c;
+        }
+        span{
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,379 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  outline: none;
+  border: 0;
+  border-radius: 7px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+  display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #303a52;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: none;
+  z-index: -1;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: black;
+  font-family: 'consolas';
+}
+
+#myApp {
+  width: 400px;
+  height: 900px;
+  background: linear-gradient(135deg, #423d2a 5%, #232228 50%);
+  border-radius: 40px;
+  padding: 20px 40px;
+  position: relative;
+}
+
+#myApp #top-nav {
+  height: 100px;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#myApp #top-nav i {
+  color: white;
+  cursor: pointer;
+}
+
+#myApp #top-nav :nth-child(3) {
+  font-size: 1rem;
+  border-radius: 50%;
+  border: 1px solid white;
+  padding: 15px;
+}
+
+#myApp #top-nav .toggle, #myApp #top-nav .default, #myApp #top-nav .active {
+  width: 65px;
+  height: 25px;
+  border-radius: 20px;
+  position: relative;
+  border: 2px solid white;
+}
+
+#myApp #top-nav .toggle::before, #myApp #top-nav .default::before, #myApp #top-nav .active::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(135deg, #423d2a 5%, #232228 50%);
+  border-radius: 50%;
+  -webkit-transition: .25s ease;
+  transition: .25s ease;
+}
+
+#myApp #top-nav .toggle.default, #myApp #top-nav .default.default, #myApp #top-nav .active.default {
+  background: white;
+}
+
+#myApp #top-nav .toggle.default::before, #myApp #top-nav .default.default::before, #myApp #top-nav .active.default::before {
+  left: 0px;
+}
+
+#myApp #top-nav .toggle.default.active, #myApp #top-nav .default.default.active, #myApp #top-nav .active.default.active {
+  background: white;
+}
+
+#myApp #top-nav .toggle.default.active::before, #myApp #top-nav .default.default.active::before, #myApp #top-nav .active.default.active::before {
+  background: linear-gradient(135deg, #423d2a 5%, #232228 50%);
+  left: 40px;
+}
+
+#myApp #main {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+#myApp #main .title {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+#myApp #main .title span {
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+
+#myApp #main .menu-nav .nav {
+  margin-top: 30px;
+  width: 100%;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#myApp #main .menu-nav .nav .nav-item {
+  color: white;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  padding: 5px;
+}
+
+#myApp #main .menu-nav .nav .nav-item.active {
+  font-weight: bold;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.2rem;
+}
+
+#myApp #main .menu-nav .nav .nav-item.active::before {
+  content: '';
+  position: absolute;
+  background: #faee1c;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  top: 25%;
+  right: -15px;
+}
+
+#myApp #main .menu-nav .nav .nav-item.filter {
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid white;
+  padding: 12px;
+}
+
+#myApp #main .menu-nav .sort-box {
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1;
+  right: 1%;
+  width: 30%;
+  height: auto;
+  margin: 5px 0;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#myApp #main .menu-nav .sort-box .option {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 5px 5px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  background: #faee1c;
+  text-align: center;
+}
+
+#myApp #main .menu-nav .sort-box.active {
+  visibility: visible;
+}
+
+#myApp #main .foods {
+  -webkit-transition: .25s ease-in;
+  transition: .25s ease-in;
+  width: 100%;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+  line-height: 30px;
+  color: white;
+  overflow: scroll;
+}
+
+#myApp #main .foods .food-category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+#myApp #main .foods .food-box {
+  width: 50%;
+  position: relative;
+  text-align: center;
+  margin: 20px 0;
+}
+
+#myApp #main .foods .food-box .food-pic {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  position: relative;
+}
+
+#myApp #main .foods .food-box .food-pic img {
+  margin: auto;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+#myApp #main .foods .food-box .food-name {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+#myApp #main .foods .food-box .intro {
+  font-size: .9rem;
+}
+
+#myApp #main .foods .food-box .price {
+  color: white;
+}
+
+#myApp #main .foods .food-box .add-to-cart {
+  display: block;
+}
+
+#myApp #main .foods .food-box .add-to-cart i {
+  padding: 10px 10px;
+  background: black;
+  border-radius: 50%;
+  font-size: .7rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#myApp #main .foods .food-box .add-to-cart .fa-check {
+  width: 50%;
+  background: #17b978;
+  border-radius: 30px;
+  padding: 10px 6px;
+}
+
+#myApp #bottom-nav {
+  margin-top: 50px;
+  padding: 20px 0;
+  border-top: 1px solid white;
+}
+
+#myApp #bottom-nav .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#myApp #bottom-nav .nav .nav-item {
+  color: white;
+  font-size: 1.9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#myApp #bottom-nav .nav .nav-item i {
+  cursor: pointer;
+}
+
+#myApp #bottom-nav .nav .nav-item:nth-child(3) {
+  font-size: 2.5rem;
+  color: #fff;
+  padding: 3px 9px;
+  background: #eac100;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 20px #faee1c;
+          box-shadow: 0 0 20px #faee1c;
+}
+
+#myApp #bottom-nav .nav .nav-item:nth-child(4) {
+  position: relative;
+}
+
+#myApp #bottom-nav .nav .nav-item span {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 0;
+  right: -10px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: .7rem;
+  font-family: 'arial';
+  font-weight: bold;
+}
+/*# sourceMappingURL=main.css.map */

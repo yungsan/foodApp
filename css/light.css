@@ -1,0 +1,108 @@
+.light-theme .fa-search,
+.light-theme .nav > .nav-item:last-child {
+  border: 0 !important;
+  font-weight: bold !important;
+}
+
+.light-theme .menu-nav > .nav > .nav-item:last-child {
+  background: #000 !important;
+}
+
+.light-theme .menu-nav > .nav > .nav-item:last-child i {
+  color: #fff !important;
+}
+
+.light-theme .price {
+  font-weight: bold !important;
+}
+
+.light-theme #bottom-nav {
+  border-top: 1px solid #000 !important;
+}
+
+#myApp.light-theme {
+  background: #fff;
+}
+
+#myApp.light-theme #top-nav i {
+  color: #000;
+}
+
+#myApp.light-theme #top-nav .toggle, #myApp.light-theme #top-nav .default, #myApp.light-theme #top-nav .active {
+  border: 2px solid #000;
+}
+
+#myApp.light-theme #top-nav .toggle::before, #myApp.light-theme #top-nav .default::before, #myApp.light-theme #top-nav .active::before {
+  background: #000;
+}
+
+#myApp.light-theme #top-nav .toggle.default, #myApp.light-theme #top-nav .default.default, #myApp.light-theme #top-nav .active.default {
+  background: #fff;
+}
+
+#myApp.light-theme #top-nav .toggle.default::before, #myApp.light-theme #top-nav .default.default::before, #myApp.light-theme #top-nav .active.default::before {
+  left: -1px;
+}
+
+#myApp.light-theme #top-nav .toggle.default.active, #myApp.light-theme #top-nav .default.default.active, #myApp.light-theme #top-nav .active.default.active {
+  background: #000;
+}
+
+#myApp.light-theme #top-nav .toggle.default.active::before, #myApp.light-theme #top-nav .default.default.active::before, #myApp.light-theme #top-nav .active.default.active::before {
+  background: #fff;
+  left: 40px;
+}
+
+#myApp.light-theme #main .title {
+  color: #000;
+}
+
+#myApp.light-theme #main .menu-nav .nav .nav-item {
+  color: #000;
+}
+
+#myApp.light-theme #main .menu-nav .nav .nav-item.active::before {
+  background: #faee1c;
+}
+
+#myApp.light-theme #main .menu-nav .nav .nav-item.filter {
+  border: 1px solid #000;
+}
+
+#myApp.light-theme #main .foods {
+  color: #000;
+}
+
+#myApp.light-theme #main .foods .food-box .food-pic {
+  border-radius: 50%;
+}
+
+#myApp.light-theme #main .foods .food-box .food-pic img {
+  -webkit-box-shadow: 0 0 15px black;
+          box-shadow: 0 0 15px black;
+}
+
+#myApp.light-theme #main .foods .food-box .price {
+  color: #000;
+}
+
+#myApp.light-theme #main .foods .food-box .add-to-cart i {
+  background: black;
+  color: #fff;
+}
+
+#myApp.light-theme #bottom-nav .nav .nav-item {
+  color: #000;
+}
+
+#myApp.light-theme #bottom-nav .nav .nav-item:nth-child(3) {
+  color: #fff;
+  background: #eac100;
+  -webkit-box-shadow: 0 0 20px #faee1c;
+          box-shadow: 0 0 20px #faee1c;
+}
+
+#myApp.light-theme #bottom-nav .nav .nav-item span {
+  color: white;
+}
+/*# sourceMappingURL=light.css.map */
